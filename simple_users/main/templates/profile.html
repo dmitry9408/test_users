@@ -1,0 +1,22 @@
+{% extends 'basic.html' %}
+
+
+{% block title %}Профиль{% endblock %}
+
+{% block content %}
+    {% if message %}
+        {{ message }}
+    {% endif %}
+    {% if user %}
+        <h2>{{ user.username }}</h2>
+        <P>{{ user.first_name }}</P>
+        <P>{{ user.last_name }}</P>
+        <p>{{ user.email }}</p>
+    <a class="button" href="{% url 'main:profile_edit' %}">Изменить личные данные</a>
+    <a class="button" href="{% url 'main:password_edit' %}">Изменить пароль</a>
+    <a class="button" href="{% url 'main:password_reset' %}">Сброс пароля</a>
+    {% else %}
+        <h1>Вы не авторизованы</h1>
+    {% endif %}
+
+{% endblock %}

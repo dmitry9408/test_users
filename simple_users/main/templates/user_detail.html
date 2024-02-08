@@ -1,0 +1,16 @@
+{% extends 'basic.html' %}
+
+
+{% block title %}Профиль{% endblock %}
+
+{% block content %}
+    {% if user %}
+        <h2>{{ user.username }}</h2>
+        <P>{{ user.first_name }}</P>
+        <P>{{ user.last_name }}</P>
+        <p>{{ user.email }}</p>
+    {% else %}
+        <h1>Пользователя не существует</h1>
+    {% endif %}
+
+{% endblock %}

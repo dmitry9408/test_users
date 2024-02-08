@@ -1,0 +1,9 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+  {% for user in users %}
+    <div class="user-info-container">
+      <a class="username" href="{% url 'main:user_detail' username=user.username%}">{{ user.username }}</a>
+    </div>
+  {% endfor %}
+{% endblock %}

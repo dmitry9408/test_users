@@ -1,0 +1,116 @@
+body {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.button{
+    padding: 8px 20px;
+    background: rgb(89, 131, 235);
+    color: #fff;
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 1s ease-out;
+}
+
+.button:hover{
+    background: rgb(44, 51, 69);
+}
+
+.main-menu-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(192, 205, 237);
+    border-radius: 5px;
+}
+
+.main-menu-container .title, .main-menu-container .profile {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: black;
+}
+
+.main-menu-container .title{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.main-menu-container .title:hover, .main-menu-container .profile:hover{
+    transition: all 1s ease-out;
+    color: blue;
+}
+
+.profile-container{
+    display: flex;
+    align-items: center;
+}
+
+.profile-container .profile{
+    padding-right: 15px;
+}
+
+.profile-container .logout-button{
+    padding: 10px;
+    background: rgb(89, 131, 235);
+    color: #fff;
+    border: transparent;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 1s ease-out;
+}
+
+.profile-container .logout-button:hover{
+    background: rgb(44, 51, 69);
+}
+
+/*  Раздел о юзерах */
+
+.user-info-container {
+    padding: 10px;
+    border-bottom: #000 solid 1px;
+}
+
+.user-info-container .username{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/*  Раздел правки личных данных  */
+
+.profile-edit-container label, .profile-edit-container input {
+    display: block;
+}
+
+.profile-edit-container label{
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+.profile-edit-container input{
+    padding: 5px;
+    border: rgb(44, 51, 69) solid 1px;
+    border-radius: 2px;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.profile-edit-container .helptext{
+    color: rgb(112, 13, 22);
+    font-weight: bold;
+    border-bottom: rgb(112, 13, 22) solid 2px;
+    margin-bottom: 5px;
+}
+
+.footer {
+    display: flex;
+    justify-content: end;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}Главная{% endblock %} - Список пользователей</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" >
+</head>
+<body class="" >
+  <header class="">
+    <h1 class="">Пользователи</h1>
+  </header>
+  <nav class="">
+    <div class="main-menu-container">
+      <div>
+        <a class="title" href="{% url 'main:index' %}">Главная</a>
+      </div>
+      <div class="">
+        <div class="">
+          {% if user.is_authenticated %}
+          <div class="profile-container">
+            <a class="profile" href="{% url 'main:profile' %}">Профиль</a>
+            <form class="" method="post" action="{% url 'main:logout' %}">
+              {% csrf_token %}
+              <button class="logout-button" name=>Выйти</button>
+            </form>
+
+          </div>
+          {% else %}
+            <a class="" href="{% url 'main:register' %}">Регистрация</a>
+            <a class="" href="{% url 'main:login' %}">Вход</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </nav>
+  {% block content %}
+  {% endblock %}
+  <footer class="footer">
+    <p class="">&copy; DmKoz.</p>
+  </footer>
+</body>
+</html>
